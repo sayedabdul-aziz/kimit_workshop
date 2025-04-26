@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:kimit_workshop/core/services/dio_provider.dart';
+import 'package:kimit_workshop/core/services/locator.dart';
 import 'package:kimit_workshop/core/services/shared_pref.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   DioProvider.init();
   SharedPref.init();
+  setupLocator();
   runApp(const MainApp());
 }
 

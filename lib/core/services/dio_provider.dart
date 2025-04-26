@@ -7,7 +7,7 @@ class DioProvider {
     _dio = Dio(BaseOptions(baseUrl: 'https://api.example.com/'));
   }
 
-  Future<Response> get(
+  static Future<Response> get(
       {required String endpoint,
       Object? data,
       Map<String, dynamic>? queryParameters,
@@ -18,7 +18,7 @@ class DioProvider {
         options: Options(headers: headers));
   }
 
-  Future<Response> post(
+  static Future<Response> post(
       {required String endpoint,
       Object? data,
       Map<String, dynamic>? queryParameters,
@@ -29,7 +29,7 @@ class DioProvider {
         options: Options(headers: headers));
   }
 
-  Future<Response> put(
+  static Future<Response> put(
       {required String endpoint,
       Object? data,
       Map<String, dynamic>? queryParameters,
@@ -40,7 +40,7 @@ class DioProvider {
         options: Options(headers: headers));
   }
 
-  Future<Response> delete(
+  static Future<Response> delete(
       {required String endpoint,
       Object? data,
       Map<String, dynamic>? queryParameters,
